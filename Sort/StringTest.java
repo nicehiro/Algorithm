@@ -1,3 +1,5 @@
+package Sort;
+
 /**
  * Created by hiro on 16-9-15.
  */
@@ -13,7 +15,7 @@ public class StringTest {
     }
 
     public static void extension(String s) {
-        int dot = s.indexOf(".");
+        int dot = s.indexOf("");
         String base = s.substring(0, dot);
         String extension = s.substring(dot+1, s.length());
 

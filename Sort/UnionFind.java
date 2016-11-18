@@ -1,6 +1,6 @@
-import edu.princeton.cs.algs4.StdIn;
+package Sort;
 
-import java.util.Scanner;
+import edu.princeton.cs.algs4.StdIn;
 
 /**
  * Created by hiro on 16-9-17.

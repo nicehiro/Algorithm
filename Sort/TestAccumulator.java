@@ -1,6 +1,7 @@
+package Sort;
+
 import edu.princeton.cs.algs4.Accumulator;
 import edu.princeton.cs.algs4.StdOut;
-import edu.princeton.cs.algs4.StdRandom;
 
 import java.util.Random;
 
