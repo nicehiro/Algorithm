@@ -14,7 +14,7 @@ public class SequentialSearchST <Key, Value> {
         Value value;
         Node next;
 
-        public Node(Key key, Value value, Node next) {
+        Node(Key key, Value value, Node next) {
             this.key = key;
             this.value = value;
             this.next = next;
