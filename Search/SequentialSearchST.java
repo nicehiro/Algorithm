@@ -1,5 +1,7 @@
 package Search;
 
+import edu.princeton.cs.algs4.Queue;
+
 /**
  * Created by hiro on 16-11-18.
  * 基于无序列表的顺序查找
@@ -23,16 +25,12 @@ public class SequentialSearchST <Key, Value> {
         }
     }
 
-    public String[] keys() {
-        String[] keys = new String[number];
-        int i = 0;
-
-        for (Node x = first; x != null; x = x.next) {
-            keys[i] = (String) x.key;
-            i ++;
+    public Iterable<Key> keys() {
+        Queue<Key> queue = new Queue<>();
+        for (Node node = first; node != null; node = node.next) {
+            queue.enqueue(node.key);
         }
-
-        return keys;
+        return queue;
     }
 
     public void put(Key key, Value value) {
@@ -56,11 +54,16 @@ public class SequentialSearchST <Key, Value> {
         return null;
     }
 
+    public boolean contains(Key key) {
+        if (key == null) throw new IllegalArgumentException("Key is null");
+        return get(key) != null;
+    }
+
     private int size() {
         return number;
     }
 
-    private Value delete(Key key) {
+    public Value delete(Key key) {
         for (Node x = first; x.next != null; x = x.next) {
             if (key.equals(x.next.key)) {
                 x.next = x.next.next;
