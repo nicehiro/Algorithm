@@ -17,6 +17,10 @@ public class DepthFirstPaths {
         dfs(g, s);
     }
 
+    /*
+    * 使用深度优先搜索将连通图的所有结点串起来
+    * 新增 edgeTo 用来记录 w 结点的前一个结点 v
+     */
     private void dfs(Graph g, int v) {
         marked[v] = true;
         for (int w : g.adj(v)) {
@@ -31,6 +35,10 @@ public class DepthFirstPaths {
         return marked[v];
     }
 
+    /*
+    * 使用 stack 记录从起始点 s 到 v 的路径
+    * 利用 edgeTo[v] 指向 v 的前一个结点的特性
+     */
     public Iterable<Integer> pathTo(int v) {
         if (hasPathTo(v)) return null;
         Stack<Integer> path = new Stack<>();

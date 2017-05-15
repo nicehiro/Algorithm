@@ -59,6 +59,7 @@ public class Graph {
             throw new IllegalArgumentException("verticles & edges must between 0 and V");
     }
 
+    // 添加边
     private void addEdge(int v, int w) {
         validDateVertex(v);
         validDateVertex(w);
@@ -67,6 +68,7 @@ public class Graph {
         adj[w].add(v);
     }
 
+    // 利用 Bag 返回可迭代的顶点 v 所链接的顶点
     public Iterable<Integer> adj(int v) {
         validDateVertex(v);
         return adj[v];

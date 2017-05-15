@@ -20,6 +20,11 @@ public class BreadthFirstSearch {
         bfs(g, s);
     }
 
+    /*
+    * 广度优先遍历
+    * 维护一个队列 用于记录每次增加的一层结点
+    * distTo 用来每个点的距离
+     */
     private void bfs(Graph g, int s) {
         Queue<Integer> queue = new Queue<>();
         for (int v=0; v<marked.length; v++) {
@@ -47,6 +52,9 @@ public class BreadthFirstSearch {
         return marked[v];
     }
 
+    /*
+    * 使用广度优先搜索得到的路径是最短的
+     */
     public Iterable<Integer> pathTo(int v) {
         validDataVertex(v);
         if (!hasPathTo(v)) return null;
