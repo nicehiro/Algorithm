@@ -6,7 +6,7 @@
     - BinarySearchST 二分查找
     - SequentialSearchST 无序链表顺序查找
     - RedBlackTree 红黑二叉查找树
-![总结]()
+[总结]()
 
 - Sort
     - Selection 选择排序
@@ -15,4 +15,4 @@
     - Quick 快速排序
     - QuickImprove 三向切分快速排序
     - Heap 堆排序
-![总结](http://nicehiro.org/2017/04/28/%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F/)
+[总结](http://nicehiro.org/2017/04/28/%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F/)
